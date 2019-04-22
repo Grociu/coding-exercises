@@ -1,6 +1,6 @@
 """
-This program will check if a given string contains all the letters of the
-English alphabeth.
+This program will check if a given string contains all the letters
+of the English alphabeth.
 https://en.wikipedia.org/wiki/Pangram
 """
 # define alphabeth
