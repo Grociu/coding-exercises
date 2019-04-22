@@ -11,7 +11,7 @@ def convert_isbn(isbn):
         if isbn_list[-1] == 'X':
             isbn_list[-1] = '10'
     isbn_ints = [
-        int(isbn_list[i]) for i in range(len(isbn_list)) 
+        int(isbn_list[i]) for i in range(len(isbn_list))
         if isbn_list[i].isnumeric()
         ]
     return isbn_ints
