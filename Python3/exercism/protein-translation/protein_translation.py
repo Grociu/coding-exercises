@@ -1,3 +1,4 @@
+# Defines a dictionary of codon - protein pair.
 code ={
     ":---" : ":---",
     "AUG" : "Methionine",
@@ -20,12 +21,13 @@ code ={
 }
 
 def proteins(strand):
-    """Returns a list of unique proteins in an RNA strand"""
+    """ Returns a list of unique proteins in a RNA strand."""
     protein_list = []
     # Divides the string into a list with three lettes
-    codons = [strand[i:i+3] for i in range(0,len(strand))[::3]]
+    codons = [strand[i: i+3] for i in range(len(strand))[::3]]
     for i in codons:
-        # Append the list of proteins with unique protein codon value until stop is hit
+        # Append the list of proteins with unique protein codon value 
+        # until stop is hit
         if code[i] != "STOP":
             if code[i] not in protein_list:
                 protein_list.append(code[i])

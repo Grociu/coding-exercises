@@ -6,9 +6,10 @@ orbital = {
         }
 
 def sec_to_year(sec, planet):
-    """ This function converts a value of seconds, to an age in years on a given planet. """
+    """ This function converts a value of sec, to age in years on a planet. """
     result = sec / (31557600 * orbital[planet])
-    return round(result,2)
+    return round(result, 2)
+
 
 class SpaceAge(object):
     def __init__(self, seconds):

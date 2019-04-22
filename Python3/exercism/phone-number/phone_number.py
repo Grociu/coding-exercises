@@ -7,14 +7,14 @@ class Phone(object):
         self.exchange_code = self.number[3:]
 
     def clean_up(self):
-        """ Remove everything except digits.  """
+        """ Remove everything except digits."""
         return "".join(d for d in self.phone_number if d.isdigit())
         
     def is_valid(self):
-        """ Checks if the number is a valid number.  """
+        """ Checks if the number is a valid number."""
         tester = self.clean_number
         # Count digits.  
-        if len(tester) not in [10,11]:
+        if len(tester) not in [10, 11]:
             self.bad_number()
         if len(tester) == 11:
             if tester[0] == '1':
@@ -23,7 +23,7 @@ class Phone(object):
                 self.bad_number()
         # At this point tester should be 10 digits long.
         # Check for valid area code and exchange code.
-        if int(tester[0]) in range(2,10) and int(tester[3]) in range(2,10):
+        if int(tester[0]) in range(2, 10) and int(tester[3]) in range(2, 10):
             return tester
         else:
             self.bad_number()
@@ -32,5 +32,6 @@ class Phone(object):
         raise ValueError("Invalid number entered")
 
     def pretty(self):
-        """ Returns the number in a (000) 000-0000 format.  """
-        return f"({self.area_code}) {self.exchange_code[0:3]}-{self.exchange_code[3:]}"
+        """ Returns the number in a (000) 000-0000 format."""
+        return f"({self.area_code}) {self.exchange_code[0: 3]}-"\
+               + f"{self.exchange_code[3:]}"

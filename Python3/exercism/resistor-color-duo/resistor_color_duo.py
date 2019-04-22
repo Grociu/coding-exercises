@@ -7,4 +7,4 @@ def code(color):
     return ordered_colors.index(color)
 
 def value(colors):
-    return 10*code(colors[0]) + code(colors[1])
+    return code(colors[0])*10 + code(colors[1])
