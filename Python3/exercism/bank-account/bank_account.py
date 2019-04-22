@@ -1,5 +1,6 @@
 import threading
 
+
 class BankAccount(object):
     """ Implements a basic functionality for a bank account.
 
