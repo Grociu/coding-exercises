@@ -4,12 +4,12 @@ class Matrix(object):
         self.matrix_list = self.matrix_string.splitlines()
    
     def row(self, index):
-        """
-        Divides the list of splitlines strings into a list of individual numbers.
-        Then get a list of numbers at i=index-1.
+        """ Divides the list of splitlines strings into 
+        a list of individual numbers.
+        Then gets a list of numbers at i=index-1.
         """
         return [int(i) for i in self.matrix_list[index-1].split()]
 
     def column(self, index):
-        """ From each list of rows, get a new list of item at index-1"""
-        return [self.row(i+1)[index-1] for i in range(0,len(self.matrix_list))]
+        """ From each list of rows, get a new list of item at index-1."""
+        return [self.row(i+1)[index-1] for i in range(len(self.matrix_list))]
