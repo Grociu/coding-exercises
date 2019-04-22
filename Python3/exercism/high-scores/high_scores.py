@@ -3,7 +3,7 @@ class HighScores(object):
         self.scores = scores
    
     def latest(self):
-        """ Returns the latest score. 
+        """ Returns the latest score.
         
         It would be the last element on the scores list.
         """
