@@ -27,17 +27,21 @@ class Hangman(object):
         return 
 
     def get_masked_word(self):
-        """ 
-        This returns a masked word for the hangman puzzle. If the letter
-        was guessed already, gives the letter, otherwise gives an underscore.
+        """ This returns a masked word for the hangman puzzle. 
+        
+        If the letter was guessed already, gives the letter, 
+        otherwise gives an underscore.
         """
-        return "".join(char if char in self.guesses_so_far else '_' for char in self.word)
+        return "".join(
+                char if char in self.guesses_so_far else
+                '_' for char in self.word
+                )
         
 
     def get_status(self):
-        """ 
-        This returns the status of the game. 
-        If you won, you won, if you don't have any more guesses you lose
+        """ This returns the status of the game. 
+
+        If you won, you won, if you don't have any more guesses you lose.
         """
         if self.get_masked_word() == self.word:
             return STATUS_WIN
