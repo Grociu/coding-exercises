@@ -4,7 +4,7 @@ class Matrix(object):
         self.matrix_list = self.matrix_string.splitlines()
    
     def row(self, index):
-        """ Divides the list of splitlines strings into 
+        """ Divides the list of splitlines strings into
         a list of individual numbers.
         Then gets a list of numbers at i=index-1.
         """
