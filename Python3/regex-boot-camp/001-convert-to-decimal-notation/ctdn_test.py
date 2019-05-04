@@ -1,7 +1,7 @@
 # import unitest module
 import unittest
 # from tested file import tested function
-from ctdn_1 import convert_to_decimal
+from ctdn import convert_to_decimal
 
 # create a class for the test with unique name of unittest.TestCase object
 class main_test(unittest.TestCase):
