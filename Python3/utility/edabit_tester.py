@@ -6,10 +6,16 @@ This module allows this.
 
 Usage:
 -------------------------
-import edabit_tester
-import tested_function
+import sys
+sys.path.append('{path for the edabit_tester module}')
+
+from edabit_tester import EdabitTester
+from {tested_module} import {tested_function}
+
 Test = EdabitTester()
+
 {Copy and paste the Edabit tests here}
+
 Test.summary()
 ------------------------
 
