@@ -30,7 +30,7 @@ class EdabitTester(object):
         self.failures = 0
         self.total = 0
     
-    def assert_equals(self, statement_1, statement_2):
+    def assert_equals(self, statement_1, statement_2, message=""):
         """If statements are the same adds a success, otherwise failure.
         
         This also prints the number of test that was failed.
@@ -44,6 +44,8 @@ class EdabitTester(object):
             self.total += 1
             print(f"FAILED TEST {self.total}: " \
                 f"{statement_1} is not {statement_2}")
+            if message:
+                print(message)
             return False
     
     def testing_result(self):
