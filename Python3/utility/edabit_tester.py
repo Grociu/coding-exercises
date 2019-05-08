@@ -38,6 +38,8 @@ class EdabitTester(object):
         if statement_1 == statement_2:
             self.succeses += 1
             self.total += 1
+            if message:
+                print(message)
             return True
         else:
             self.failures += 1
