@@ -1,0 +1,1 @@
+This was quite easy, given the generous unfussy test function input.
