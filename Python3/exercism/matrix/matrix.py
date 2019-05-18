@@ -4,13 +4,9 @@ class Matrix(object):
         self.matrix_as_lists = self.parse_matrix()
 
     def parse_matrix(self):
-        """Takes the origial string and turns it into a list of lists."""
-        stage1 = self.matrix_string.splitlines()
-        stage2 = [row_string.split() for row_string in stage1]
-        for i in range(len(stage2)):
-            for j in range(len(stage2[i])):
-                stage2[i][j] = int(stage2[i][j])
-        return stage2
+        """The origial string is turned into a list of lists of integers."""
+        return [[int(num) for num in rows] for rows in [
+            row_str.split() for row_str in self.matrix_string.splitlines()]]
 
     def row(self, index):
         """For a given number, returns that row of the matrix a list."""
